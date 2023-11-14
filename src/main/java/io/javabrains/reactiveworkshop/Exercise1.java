@@ -32,7 +32,7 @@ public class Exercise1 {
                 .orElse(-1);
         System.out.println(value);
         System.out.println("");
-                
+
         // Print first names of all users in userStream
         StreamSources.userStream()
                 .forEach(user -> System.out.println(user.getFirstName()));

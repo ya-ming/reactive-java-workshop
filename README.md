@@ -35,3 +35,39 @@
 * An item
 * A complete event, a terminate event
 * A failure event, a terminate event
+
+* Operators
+    * filter
+    * map
+    * defaultIfEmpty
+    * log
+        ```java
+            List<Integer> numbers = ReactiveSources
+            .intNumbersFlux()
+            .log()
+            .toStream()
+            .collect(Collectors.toList());
+        ```
+        ```
+        [ INFO] (main) onSubscribe(FluxConcatMap.ConcatMapImmediate)
+        [ INFO] (main) request(256)
+        [ INFO] (parallel-1) onNext(1)
+        [ INFO] (parallel-2) onNext(2)
+        [ INFO] (parallel-3) onNext(3)
+        [ INFO] (parallel-4) onNext(4)
+        [ INFO] (parallel-5) onNext(5)
+        [ INFO] (parallel-6) onNext(6)
+        [ INFO] (parallel-7) onNext(7)
+        [ INFO] (parallel-8) onNext(8)
+        [ INFO] (parallel-9) onNext(9)
+        [ INFO] (parallel-10) onNext(10)
+        [ INFO] (parallel-10) onComplete()
+        ```
+    * subscribe
+
+## Return values
+
+## Error
+* Terminal event
+* Original sequence does not continue
+* Calls the `onError` method of the Subscriber

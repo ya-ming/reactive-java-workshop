@@ -15,18 +15,18 @@ public class Exercise5 {
         // Subscribe to a flux using the error and completion hooks
         ReactiveSources.intNumberMono()
                 .subscribe(number -> System.out.println(number),
-                            error -> System.out.println(error.getMessage()),
-                            () -> System.out.println("Complete"));
+                        error -> System.out.println(error.getMessage()),
+                        () -> System.out.println("Complete"));
 
         ReactiveSources.userMono()
                 .subscribe(user -> System.out.println(user),
-                            error -> System.out.println(error.getMessage()),
-                            () -> System.out.println("Complete"));
-                            
+                        error -> System.out.println(error.getMessage()),
+                        () -> System.out.println("Complete"));
+
         ReactiveSources.userFlux()
                 .subscribe(user -> System.out.println(user),
-                            error -> System.out.println(error.getMessage()),
-                            () -> System.out.println("Complete"));
+                        error -> System.out.println(error.getMessage()),
+                        () -> System.out.println("Complete"));
 
         // Subscribe to a flux using an implementation of BaseSubscriber
         ReactiveSources.intNumbersFlux().subscribe(new MySubscriber());
