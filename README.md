@@ -18,3 +18,20 @@
     * flatMap
     * findFirst
     * ... and many more
+
+## Design Patterns
+* Iterator
+* Observer
+
+## Reactive Streams
+* subscribe - the glue that connects an observer to an Observable
+* publisher and subscriber
+
+###
+* Flux - async sequence of events, return 0 or n times
+* Mono - async item, return 0 or 1 time
+
+### What's coming?
+* An item
+* A complete event, a terminate event
+* A failure event, a terminate event

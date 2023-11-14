@@ -26,7 +26,6 @@ public class Exercise1 {
 
         // Print the first number in intNumbersStream that's greater than 5.
         // If nothing is found, print -1
-
         Integer value = StreamSources.intNumbersStream()
                 .filter(number -> number > 5)
                 .findFirst()
